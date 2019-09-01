@@ -1,58 +1,60 @@
-# Release Notes
+# Notas de Lançamento
 
-- [Versioning Scheme](#versioning-scheme)
-- [Support Policy](#support-policy)
+- [Esquema de Versionamento](#versioning-scheme)
+- [Politica de Suporte](#support-policy)
 - [Laravel 5.8](#laravel-5.8)
 
 <a name="versioning-scheme"></a>
-## Versioning Scheme
+## Esquema de Versionamento
 
-Laravel's versioning scheme maintains the following convention: `paradigm.major.minor`. Major framework releases are released every six months (February and August), while minor releases may be released as often as every week. Minor releases should **never** contain breaking changes.
+O esquema de versionamento do laravel mantém a seguinte convenção: `paradigma.maiores.menores`. Lançamentos maiores do framework acontecem a cada seis meses (Fevereiro e Agosto), enquanto lançamentos menores podem ser feitos até semanalmente. Lançamentos menores **nunca** devem conter mudanças drásticas, que podem quebrar alguma coisa.
 
-When referencing the Laravel framework or its components from your application or package, you should always use a version constraint such as `5.8.*`, since major releases of Laravel do include breaking changes. However, we strive to always ensure you may update to a new major release in one day or less.
+Quando estiver referenciando o framework laravel ou um de seus componentes, você deve sempre usar um padrão de versão como `5.8.*`, já que lançamentos maiores do laravel incluem mudanças drásticas que podem quebrar alguma coisa. No entanto, nós tentamos ao máximo garantir que você possa atualizar para uma nova versão em um dia ou menos.
 
-Paradigm shifting releases are separated by many years and represent fundamental shifts in the framework's architecture and conventions. Currently, there is no paradigm shifting release under development.
+Lançamentos de mudança de paradigma são separados por muitos anos e representam mudanças fundamentais na arquitetura e convenções do framework. Atualmente, não há um novo paradigma sendo desenvolvido.
+
 
 <a name="support-policy"></a>
-## Support Policy
+## Politica de Suporte
 
-For LTS releases, such as Laravel 5.5, bug fixes are provided for 2 years and security fixes are provided for 3 years. These releases provide the longest window of support and maintenance. For general releases, bug fixes are provided for 6 months and security fixes are provided for 1 year. For all additional libraries, including Lumen, only the latest release receives bug fixes.
+Para versões LTS, como Laravel 5.5, correções de bugs são fornecidas durante 2 anos, e correções de segurança são fornecidos durante 3 anos. Estas versões possuem o maior tempo de suporte e manutenção. Para outras versão (não LTS), correções de bugs são fornecidos por até 6 meses e correções de segurança são fornecidos durante 1 ano. Para todas as outras bibliotecas adicionais, incluindo Lumen, somente as ultimas versões recebem correções de bugs.
 
-| Version | Release | Bug Fixes Until | Security Fixes Until |
+| Versão | Lançamento | Correções de Bugs Até | Correções de Segurança Até |
 | --- | --- | --- | --- |
-| 5.0 | February 4th, 2015 | August 4th, 2015 | February 4th, 2016 |
-| 5.1 (LTS) | June 9th, 2015 | June 9th, 2017 | June 9th, 2018 |
-| 5.2 | December 21st, 2015 | June 21st, 2016 | December 21st, 2016 |
-| 5.3 | August 23rd, 2016 | February 23rd, 2017 | August 23rd, 2017 |
-| 5.4 | January 24th, 2017 | July 24th, 2017 | January 24th, 2018 |
-| 5.5 (LTS) | August 30th, 2017 | August 30th, 2019 | August 30th, 2020 |
-| 5.6 | February 7th, 2018 | August 7th, 2018 | February 7th, 2019 |
-| 5.7 | September 4th, 2018 | March 4th, 2019 | September 4th, 2019 |
-| 5.8 | February 26th, 2019 | August 26th, 2019 | February 26th, 2020 |
+| 5.0 | 4 de Fevereiro de 2015 | 4 de Agosto de 2015 | 4 de Fevereiro de 2016 |
+| 5.1 (LTS) | 9 de Junho de 2015 | 9 de Junho de 2017 | 9 de Junho de 2018 |
+| 5.2 | 21 de Dezembro de 2015 | 21 de Junho de 2016 | 21 de Dezembro de 2016 |
+| 5.3 | 23 de Agosto de 2016 | 23 de Fevereiro de 2017 | 23 de Agosto de 2017 |
+| 5.4 | 24 de Janeiro de 2017 | 24 de Julho de 2017 | 24 de Janeiro de 2018 |
+| 5.5 (LTS) | 30 de Agosto de 2017 | 30 de Agosto de 2019 | 30 de Agosto de 2020 |
+| 5.6 | 7 de Fevereiro de 2018 | 7 de Agosto de 2018 | 7 de Fevereiro de 2019 |
+| 5.7 | 4 de Setembro de 2018 | 4 de March de 2019 | 4 de Setembro de 2019 |
+| 5.8 | 26 de Fevereiro de 2019 | 26 de Agosto de 2019 | 26 de Fevereiro de 2020 |
 
 <a name="laravel-5.8"></a>
 ## Laravel 5.8
 
-Laravel 5.8 continues the improvements made in Laravel 5.7 by introducing has-one-through Eloquent relationships, improved email validation, convention based automatic registration of authorization policies, DynamoDB cache and session drivers, improved scheduler timezone configuration, support for assigning multiple authentication guards to broadcast channels, PSR-16 cache driver compliance, improvements to the `artisan serve` command, PHPUnit 8.0 support, Carbon 2.0 support, Pheanstalk 4.0 support, and a variety of other bug fixes and usability improvements.
+Laravel 5.8 continua as melhorias feitas no Laravel 5.7 introduzindo relacionamentos Eloquent do tipo hasOneThrough (possui um através de), validação de email melhoradas, registro automatico de politicas de autorização baseado em convenções, drivers de cache e sessões utilizando DynamoDB, configurações de timezone do agendador de tarefas melhoradas, suporte para utilização de multiplos guards de autenticação em canais de transmissão, drivers de cache agora seguem o padrão PSR-16, melhorias no comando `artisan serve`, suporte a PHPUnit 8.0, suporte a Carbon 2.0, suporte a Pheanstalk 4.0, e uma variedade de outras correções de bugs e melhorias de usabilidade. 
 
-### Eloquent `HasOneThrough` Relationship
+### Relacionamento do Eloquent `HasOneThrough` (possui um através de)
 
-Eloquent now provides support for the `hasOneThrough` relationship type. For example, imagine a Supplier model `hasOne` Account model, and an Account model has one AccountHistory model. You may use a `hasOneThrough` relationship to access a supplier's account history through the account model:
+O Eloquent agora possui suporte para o tipo de relacionamento `hasOneThrough` (possui um através de). Por exemplo, imagine que um model Supplier (fornecedor) `hasOne` (possui) um model Account (conta), e um model Account possui um model AccountHistory (histórico da conta). Você pode utlizar um relacionamento `hasOneThrough` (possui um através de) para acessar o histório da conta do fornecedor através do model Conta (Account) que pertence a ele.
 
     /**
-     * Get the account history for the supplier.
+     * Pegar histórico da conta do fornecedor (AccountHistory)
+     * através da conta do fornecedor (Account)
      */
     public function accountHistory()
     {
         return $this->hasOneThrough(AccountHistory::class, Account::class);
     }
 
-### Auto-Discovery Of Model Policies
+### Descobrimento automático de politicas do Model
 
-When using Laravel 5.7, each model's corresponding [authorization policy](/docs/{{version}}/authorization#creating-policies) needed to be explicitly registered in your application's `AuthServiceProvider`:
+Quando utlizando Laravel 5.8, cada model possuia sua própria [politica de autorização](/docs/{{version}}/authorization#creating-policies) que precisava ser explicitamente registrada no service provider `AuthServiceProvider` da sua aplicação:
 
     /**
-     * The policy mappings for the application.
+     * O mapeamento de politicas da sua aplicação
      *
      * @var array
      */
@@ -60,9 +62,9 @@ When using Laravel 5.7, each model's corresponding [authorization policy](/docs/
         'App\User' => 'App\Policies\UserPolicy',
     ];
 
-Laravel 5.8 introduces auto-discovery of model policies as long as the model and policy follow standard Laravel naming conventions. Specifically, the policies must be in a `Policies` directory below the directory that contains the models. So, for example, the models may be placed in the `app` directory while the policies may be placed in the `app/Policies` directory. In addition, the policy name must match the model name and have a `Policy` suffix. So, a `User` model would correspond to a `UserPolicy` class.
+O Laravel 5.8 introduz um novo descobrimento automático de politicas do model desde que o nome do model e da politica sigam a convenção de nomes do laravel. Especificamente, as politicas devem estar na pasta `Politices` acima da pasta que contem os models. Então, por exemplo, os models devem ser colocados na pasta `app` enquanto as politicas devem ser colocadas na pasta `app/Policies`. Para complementar, o nome da politica deve ser igual ao nome do model e ter um sufixo `Policy`. Então, um model `User` teria uma classe correspondente `UserPolicy`. 
 
-If you would like to provide your own policy discovery logic, you may register a custom callback using the `Gate::guessPolicyNamesUsing` method. Typically, this method should be called from your application's `AuthServiceProvider`:
+Se você quiser usar sua própria lógica de resolução de politicas, você pode registrar um callback customizado utilizando o método `Gate::guessPolicyNamesUsing`. Tipicamente, esse método deve ser chamado do seu service provider `AuthServiceProvider`
 
     use Illuminate\Support\Facades\Gate;
 
