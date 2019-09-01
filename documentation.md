@@ -1,5 +1,5 @@
 - ## Prologue
-    - [Release Notes](/docs/{{version}}/releases)
+    - [Notas de Lançamento](/docs/{{version}}/releases)
     - [Upgrade Guide](/docs/{{version}}/upgrade)
     - [Contribution Guide](/docs/{{version}}/contributions)
     - [API Documentation](/api/{{version}})
